@@ -8,7 +8,7 @@ console.log(person);
 person.age = 30;
 console.log(person);
 
-// O método freeze() de Object congela as mudanças, tornando então o objeto imutável
+// O método freeze() de Object congela as possibilidades de mudanças, tornando então o objeto imutável
 Object.freeze(person);
 person.age = 58;
 console.log(person);
