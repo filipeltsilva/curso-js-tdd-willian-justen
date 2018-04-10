@@ -1,6 +1,6 @@
 /*
   A Fetch API é uma alternativa que visa atribuir a praticidade de trabalho das promises ao AJAX.
-  Possui 3 estados: pending, resolved e rejected
+  Promises possuem 3 estados: pending, resolved e rejected
 */
 
 var fetch = require('node-fetch');
