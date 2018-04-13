@@ -3,6 +3,7 @@
   Útil quando não se tem certeza de quantos parâmetros serão passados.
   Sempre retorna um array e é essa a principal diferença para o objeto arguments.
 */
+
 function multiply(multiplier, ...parameters) {
   return parameters.map(parameter => parameter * multiplier);
 }

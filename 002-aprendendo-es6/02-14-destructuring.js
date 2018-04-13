@@ -17,7 +17,6 @@ const {name, age, url} = person;
 console.log(`Oi, sou ${name}, tenho ${age} anos e o endereço do meu site é ${url}`);
 console.log();
 
-
 /*
   É possível usar o Desctructuring com elementos aninhados, como objetos dentro de objetos.
   Também é possível mudar o nome da variável, adicionando após os dois pontos o novo nome desejado.

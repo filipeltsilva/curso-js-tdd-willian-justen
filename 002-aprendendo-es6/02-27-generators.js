@@ -1,7 +1,7 @@
 /*
   Generators também são iteradores.
-  Coloca-se um asterísco após a palavra function e usa-se a palavra-chave yield como em um retorno de função.
-  A chamada da função é semelhante aos iterators, com next() e sua execução não é top-down como numa função comum.
+  Coloca-se um asterísco após a palavra function e usa-se a palavra-chave yield semelhante ao return.
+  Pode-se usar vários yields em um generator, sendo a chamada a cada um feita em sequência com o next(). Logo, a execução do bloco é quebrada e não de forma contínua como em uma função comum.
 */
 
 function* generateNames() {
