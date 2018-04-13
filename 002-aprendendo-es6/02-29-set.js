@@ -19,6 +19,7 @@ console.log(mySet.has('Animal'));
 console.log();
 
 let itens = mySet.values();
+
 for (const item of itens) {
   console.log(item);
 }
