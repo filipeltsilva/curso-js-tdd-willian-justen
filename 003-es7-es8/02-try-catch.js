@@ -1,7 +1,6 @@
-const fetch = require('node-fetch');
-
 async function getRepos() {
   try {
+    const fetch = require('node-fetch');
     const response = await fetch('https://api.github.com/users/filipeltsilva/repos');
     const data = await response.json();
 
