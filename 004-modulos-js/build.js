@@ -5524,7 +5524,13 @@ var where = /*#__PURE__*/__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__inte
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ramda__ = __webpack_require__(119);
-// Esse tipo de import com alias importa todas as funções de uma determinada biblioteca
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__exports__ = __webpack_require__(320);
+/*
+  Esse tipo de import com * e alias importa todas as funções de uma determinada biblioteca.
+  É possível importar apenas um método de uma biblioteca, dentro das {}. Pode-se
+  aplicar aliases para eles também. Ex.: import {union as juntar} from 'ramda'
+*/
+
 
 
 var arrayA = [1, 1, 2, 3, 4, 4, 4, 5];
@@ -5532,6 +5538,11 @@ var arrayB = [6, 6, 6, 7, 8, 8, 9, 10, 10, 10, 10];
 var arrayC = __WEBPACK_IMPORTED_MODULE_0_ramda__["a" /* union */](arrayA, arrayB);
 
 console.log(arrayC);
+console.log(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__exports__["a" /* default */])(13, 21));
+console.log(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__exports__["b" /* subtract */])(89, 55));
+console.log(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__exports__["c" /* multiplicar */])(8, 21));
+console.log(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__exports__["d" /* divide */])(144, 89));
+console.log(__WEBPACK_IMPORTED_MODULE_1__exports__["e" /* PI */]);
 
 /***/ }),
 /* 121 */
@@ -13489,6 +13500,54 @@ var zipWith = /*#__PURE__*/__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__in
   return rv;
 });
 /* unused harmony default export */ var _unused_webpack_default_export = (zipWith);
+
+/***/ }),
+/* 320 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["b"] = subtract;
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return multiply; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return divide; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return PI; });
+function sum(number1, number2) {
+  return number1 + number2;
+}
+
+/*
+  export default compõe o método principal de exportação. Cada arquivo só pode ter 1 export default.
+  Não é necessário uso de {} para sua importação.
+  É permitido o uso de quaisquer nomes diferentes na importação.
+*/
+/* harmony default export */ __webpack_exports__["a"] = (sum);
+
+/*
+  Padrão named export. Pode-se usar vários named exports em um único arquivo.
+  O uso de {} para sua importação é necessário.
+  Deve-se usar o mesmo nome da exportação, não permitindo nomes diferentes na importação.
+*/
+function subtract(number1, number2) {
+  return number1 - number2;
+}
+
+var PI = 3.14;
+
+function multiply(number1, number2) {
+  return number1 * number2;
+}
+
+function divide(number1, number2) {
+  return number1 / number2;
+}
+
+/*
+  Esse padrão de exportação é mais flexível e permite a exportação de mais de uma estrutura.
+  Também permite o uso de aliases.
+  Variáveis também podem ser exportadas.
+*/
+
+
+// É possível exportar tudo o que se deseja em uma única declaração: export * as qualquerNome.
 
 /***/ })
 /******/ ]);
