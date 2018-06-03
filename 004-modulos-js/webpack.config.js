@@ -1,4 +1,5 @@
 const webpack = require('webpack')
+const nodeEnvironment = process.env.NODE_ENV || 'production'
 
 module.exports = {
   entry: {
@@ -15,7 +16,7 @@ module.exports = {
         loader: 'babel-loader',
         query: {
           presets: [
-            ['es2015', {modules: false}]
+            ['es2015', { modules: false }]
           ]
         }
       }
@@ -25,6 +26,9 @@ module.exports = {
     new webpack.optimize.UglifyJsPlugin({
       compress: { warnings: false },
       output: { comments: false }
+    }),
+    new webpack.DefinePlugin({
+      'process.env': { NODE_ENV: JSON.stringify(nodeEnvironment) }
     })
   ]
 }
