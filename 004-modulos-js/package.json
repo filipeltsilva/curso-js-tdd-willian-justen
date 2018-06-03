@@ -8,10 +8,12 @@
     "babel-preset-es2015-native-modules": "^6.9.4",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
-    "webpack": "^2.7.0"
+    "webpack": "^2.7.0",
+    "webpack-dev-server": "^1.16.5"
   },
   "scripts": {
     "build": "webpack --colors --progress",
-    "watch": "npm run build -- --watch"
+    "watch": "npm run build -- --watch",
+    "server": "webpack-dev-server --inline --open"
   }
 }
