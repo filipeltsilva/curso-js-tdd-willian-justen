@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "ramda": "^0.25.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-es2015-native-modules": "^6.9.4",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "webpack": "^2.7.0",
+    "webpack-dev-server": "^1.16.5"
+  },
+  "scripts": {
+    "build": "webpack --colors --progress",
+    "watch": "npm run build -- --watch",
+    "server": "webpack-dev-server --inline --open",
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js"
+  }
+}
